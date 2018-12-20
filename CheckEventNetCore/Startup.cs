@@ -19,6 +19,8 @@ namespace CheckEventNetCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<MessageLogger>();
+            services.AddSingleton<SmsMessageSender>();
+            services.AddSingleton<EmailMessageSender>();
             services.AddSingleton<IMessageSender, MessageSender>();
         }
 
